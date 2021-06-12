@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+// ===========チャットリスト===========
+
+$icon-size: 75px;
+
+
+.users-list {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 380px;
+    height: 100vh;
+    overflow-x: scroll;
+    border-right: 1px solid #bbb;
+    .user-container {
+        padding: 10px;
+        width: 355px !important;
+        height: 98px;
+        box-sizing: content-box;
+        border-bottom: 1px solid #bbb;
+        display: inline-flex;
+        align-items: center;
+        .user-icon {
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: $icon-size;
+            width: $icon-size;
+            height: $icon-size;
+            border-radius: 50%;
+            img {
+                width: $icon-size;
+                height: $icon-size;
+            }
+        }
+        .user-info {
+            flex-basis: calc(100% - 105px);
+            height: 98px;
+            align-self: center;
+            display: flex;
+            flex-flow: column;
+            .user-name {
+                font-weight: bolder;
+                width: 260px;
+                font-weight: 28px;
+                padding-top: 5px;
+                padding-left: 18px;
+            }
+            .user-last-message {
+                width: 260px;
+                height: 60px;
+                padding: 2px 2px 2px 18px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                color: rgb(133, 133, 133);
+            }
+        }
+    }
+    .slected {
+        background-color: rgba(55, 247, 141, 0.1);
+        border-left: green 6px solid;
+        width: 355px;
+    }
+}
+
+.user-chat {
+    width: calc(100% - 381px);
+    height: 100vh;
+    float: right;
+    position: fixed;
+    top: 0;
+    right: 0;
+    .user-chat- {
+        &view {
+            height: calc(100vh - 78px);
+            width: 100%;
+            display:flex;
+            justify-content:flex-end;
+            flex-flow: column;
+            .talk-person {
+                display: flex;
+                .person-message {
+                    display: flex;
+                    width: 100%;
+                    .user-icon {
+                        width: 58px;
+                        height: 58px;
+                    }
+                    .person-info {
+                        flex-basis: calc(100% - 58px);
+                        display: flex;
+                        flex-flow: column;
+                        .person-name {
+                            font-weight: normal;
+                            padding: 10px 0px 0px 7px;
+                            color: rgb(150, 150, 150);
+                        }
+                        .person-message {
+                            background-color: rgba(55, 247, 141, 0.3);
+                            margin: 5px 0px 2px 0px;
+                            border-radius: 3px 12px 12px 12px;
+                            display: block;
+                            height: 40px;
+                            width: 52%;
+                            p {
+                                text-align: left;
+                                padding: 10px;
+                            }
+                        }
+                        .date {
+                            font-size: 6px;
+                            padding-left: 10px;
+                            color: rgba(150, 150, 150, 0.514);
+                        }
+                    }
+                }
+            }
+        }
+
+        &sendArea {
+            position: fixed;
+            bottom: 0;
+            height: 78px;
+            width: 100%;
+            background-color: rgb(235, 235, 235);
+            .div-input {
+                width: 50vw;
+                margin: 20px 0px 0px 40px;
+                padding: 12px;
+                border-top: solid 0.5px #bbb;
+                border-bottom: solid 0.5px #bbb;
+                border-left: solid 0.5px #bbb;
+                border-right: none;
+                border-radius: 7px 0 0 7px;
+                font-size: 14px;
+                &:focus {
+                    outline: none;
+                }
+            }
+            .button {
+                margin-left: -5px;
+                font-weight: bolder;
+                padding: 10.5px 24px;
+                color: #222;
+                background-color: rgb(89, 214, 110);
+                border-radius:  0px 18px 18px 18px;
+                outline: none;
+                border: none;
+                &:active {
+                    background-color: darken(rgb(89, 214, 110), 25%);
+                }
+            }
+        }
+    }
+}
