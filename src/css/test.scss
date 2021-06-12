@@ -81,15 +81,16 @@ $icon-size: 75px;
             flex-flow: column;
             .talk-person {
                 display: flex;
+                flex-flow: column;
                 .person-message {
                     display: flex;
                     width: 100%;
+                    max-width: 70%;
                     .user-icon {
                         width: 58px;
                         height: 58px;
                     }
                     .person-info {
-                        flex-basis: calc(100% - 58px);
                         display: flex;
                         flex-flow: column;
                         .person-name {
@@ -97,16 +98,15 @@ $icon-size: 75px;
                             padding: 10px 0px 0px 7px;
                             color: rgb(150, 150, 150);
                         }
-                        .person-message {
-                            background-color: rgba(55, 247, 141, 0.3);
+                        .person-inner-message {
+                            background-color: #eee;
                             margin: 5px 0px 2px 0px;
                             border-radius: 3px 12px 12px 12px;
-                            display: block;
-                            height: 40px;
-                            width: 52%;
+                            display: inline-block;
                             p {
-                                text-align: left;
                                 padding: 10px;
+                                white-space: pre-wrap;
+                                display: block;
                             }
                         }
                         .date {
@@ -114,6 +114,25 @@ $icon-size: 75px;
                             padding-left: 10px;
                             color: rgba(150, 150, 150, 0.514);
                         }
+                    }
+                }
+                .my-message {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    flex-flow: column;
+                    .message-case {
+                        background-color: rgba(55, 247, 141, 0.3);
+                        padding: 10px;
+                        border-radius: 12px 0px 12px 12px;
+                        margin: 10px 13px 0 auto;
+                        max-width: 70%;
+                    }
+                    .date {
+                        font-size: 6px;
+                        padding-left: 10px;
+                        color: rgba(150, 150, 150, 0.514);
+                        margin: 0 28px 0 auto;
                     }
                 }
             }
@@ -127,7 +146,7 @@ $icon-size: 75px;
             background-color: rgb(235, 235, 235);
             .div-input {
                 width: 50vw;
-                margin: 20px 0px 0px 40px;
+                margin: 20.5px 0px 0px 40px;
                 padding: 12px;
                 border-top: solid 0.5px #bbb;
                 border-bottom: solid 0.5px #bbb;
@@ -145,7 +164,7 @@ $icon-size: 75px;
                 padding: 10.5px 24px;
                 color: #222;
                 background-color: rgb(89, 214, 110);
-                border-radius:  0px 18px 18px 18px;
+                border-radius:  0px 18px 18px 0px;
                 outline: none;
                 border: none;
                 &:active {

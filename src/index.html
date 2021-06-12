@@ -16,41 +16,46 @@
             </div>
             <div class="user-info">
                 <div class="user-name">
-                    世界の管理人
+                    サイトの管理人
                 </div>
                 <div class="user-last-message">
-                    あの件については申し訳ありませんでした。
+                    <p>あの件については申し訳ありませんでした。</p>
                 </div>
             </div>
         </div>
     </div>
     <div class="user-chat">
         <div class="user-chat-view">
-            <div class="talk-person">
+            <div class="talk-person" id='chatArea'>
                 <div class="person-message">
                     <div class="user-icon">
                         <img src="img/sozai_cman_jp_20210611230506.svg" class="user-icon">
                     </div>
                     <div class="person-info">
                         <div class="person-name">
-                            世界の管理人
+                            サイトの管理人
                         </div>
-                        <div class="person-message">
-                            <p>
-                                あの件については申し訳ありませんでした。
-                            </p>
+                        <div class="person-inner-message">
+                            <p>あの件については申し訳ありませんでした。</p>
                         </div>
                         <p class="date">2020/1/1  19:30</p>
                     </div>
                 </div>
                 <div class="my-message">
-
+                    <div class="message-case">
+                        <div class="my-message">
+                            気にしなくても大丈夫ですよ
+                        </div>
+                    </div>
+                    <p class="date">
+                        2020/1/1 19:45
+                    </p>
                 </div>
             </div>
         </div>
         <div class="user-chat-sendArea">
-            <input type="text" class="div-input">
-            <input type="submit" class="button" value="送信">
+            <input type="text" class="div-input" id='form'>
+            <input type="submit" class="button" value="送信" id='submit'>
         </div>
     </div>
     <script src="js/message.js"></script>
